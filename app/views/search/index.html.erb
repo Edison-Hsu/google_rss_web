@@ -1,0 +1,6 @@
+<%= form_tag('/search') do %>
+  <p>关键字用空格分割</p>
+  <p>eg: 气候 变化 低碳 新能源 CSR 环保 环境 领域 研究 数据监测 联盟</p>
+  <input type="text" name="keywords"/>
+  <div><%= submit_tag 'Search' %></div>
+<% end %>
