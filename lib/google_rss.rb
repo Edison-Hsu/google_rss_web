@@ -35,7 +35,6 @@ def print_list(keyword)
   rss.entries.each do |r|
     next if !in_range(r.pubDate)
     link = get_link(r.link)
-    puts r.title.class
     result << {title: r.title, link: link} if link
   end
   result

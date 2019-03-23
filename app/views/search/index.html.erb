@@ -1,6 +1,11 @@
+<div style="margin: 40px;">
 <%= form_tag('/search') do %>
   <p>关键字用空格分割</p>
   <p>eg: 气候 变化 低碳 新能源 CSR 环保 环境 领域 研究 数据监测 联盟 论坛 绿色 生态 政策 可持续 南极 北极 天气 动物 盗猎</p>
-  <input type="text" name="keywords"/>
-  <div><%= submit_tag 'Search' %></div>
+  <input type="text" name="keywords" style="border-radius: 20px;"/>
+  <input class="hollow button" type="submit" name="commit" value="Search" data-disable-with="Search" style="margin: 10px auto;
+    width: 30%;
+    border-radius: 20px;
+    display: block;">
 <% end %>
+</div>
