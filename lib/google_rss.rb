@@ -5,8 +5,6 @@ require 'faraday_middleware'
 require 'open-uri'
 require 'time'
 
-# keywords = '气候 变化 低碳 新能源 CSR 环保 环境 领域 研究 数据监测 联盟 论坛 绿色 生态 政策 可持续 南极 北极 天气 动物 盗猎'.split(' ')
-
 def url(keyword)
   # u = "https://news.google.com/news/rss/search/section/q/#{keyword}/#{keyword}?hl=zh-CN&gl=CN&ned=cn"
   u = "https://news.google.com/_/rss/search?q=#{keyword}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
@@ -38,7 +36,7 @@ def print_list(keyword)
     next if !in_range(r.pubDate)
     link = get_link(r.link)
     puts r.title.class
-    result << {title: r.title.encode('utf-8'), link: link} if link
+    result << {title: r.title, link: link} if link
   end
   result
 end
